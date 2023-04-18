@@ -12,22 +12,10 @@ public class Carrito{
     //carrito pagado
     public enum Estado{ABIERTO, CERRADO, PAGADO}
 
-    public void finalizarCompra(){
-        estado = Estado.CERRADO;
-        this.totalAPagar = items.stream().mapToInt(i->i.precioTotal).sum();
-    }
-
-    public void agregarItem(Item item){
-        this.items.add(item);
-    }
-
-    public void quitarDeCarrito(Item item){
-        this.items.remove(item);
-    }
-    
-    public void pagarCarrito(){
-        this.estado = Estado.PAGADO;
-    }
+    public void finalizarCompra(){estado = Estado.CERRADO;}
+    public void agregarItem(Item item){this.items.add(item);}
+    public void quitarDeCarrito(Item item){this.items.remove(item);}
+    public void pagarCarrito(){this.estado = Estado.PAGADO;}
 
     public static void main(String[] args){ System.out.println("hello world");}
 
