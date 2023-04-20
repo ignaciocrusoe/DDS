@@ -24,9 +24,11 @@ public class Tarjeta{
 		
 	}
 
-	public static void main(String[] args) {
-
-		
-	}
+    public Tarjeta crearTarjeta(){
+        Tarjeta tarjeta = new Tarjeta();
+    }
 	
+    public Boolean esVerificada(){
+        return verificada;
+    }
 }

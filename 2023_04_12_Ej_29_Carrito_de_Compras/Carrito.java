@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Carrito{
     private List<Item> items = new ArrayList<Item>();
     private Persona persona;
@@ -14,7 +15,7 @@ public class Carrito{
 
     public void finalizarCompra(){
         estado = Estado.CERRADO;
-        this.totalAPagar = items.stream().mapToInt(i->i.precioTotal).sum();
+        this.totalAPagar = items.stream().mapToInt(i->i.precio).sum();
     }
 
     public void agregarItem(Item item){
