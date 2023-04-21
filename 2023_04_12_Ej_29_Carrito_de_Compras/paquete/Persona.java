@@ -1,3 +1,4 @@
+package paquete;
 public class Persona{
     private String nombre;
     private String direcEnvio;
@@ -6,7 +7,9 @@ public class Persona{
     private Integer numero;
     private Boolean esPreferencial;
 
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        System.out.println("Persona");
+    }
 
     public Persona(){
 

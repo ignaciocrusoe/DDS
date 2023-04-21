@@ -1,3 +1,4 @@
+package paquete;
 public class Producto {
 
     private Integer precio;

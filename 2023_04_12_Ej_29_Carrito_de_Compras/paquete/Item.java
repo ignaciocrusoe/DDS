@@ -1,4 +1,4 @@
-
+package paquete;
 import java.sql.Date;
 
 public class Item{
@@ -8,9 +8,6 @@ public class Item{
     private int precio;
     private int fecha;
 
-    public static void main(String[] args) {
-        //Tarjeta tarjeta = new Tarjeta();
-    }
 
     public int precio(){
         return precio;
@@ -26,11 +23,5 @@ public class Item{
 
     public void agregarACarrito(String newCarrito){
         carrito = newCarrito;
-    }
-}
-
-public class Main{
-    public void main(String[] args){
-        Item item = new Item();
     }
 }
