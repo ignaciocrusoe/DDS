@@ -1,4 +1,4 @@
-import paquete.Item;
+package paquete;
 
 public class Main{
     public void main(String[] args){

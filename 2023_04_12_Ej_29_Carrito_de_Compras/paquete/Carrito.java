@@ -16,7 +16,7 @@ public class Carrito{
 
     public void finalizarCompra(){
         estado = Estado.CERRADO;
-        this.totalAPagar = items.stream().mapToInt(i->i.precio).sum();
+        this.totalAPagar = items.stream().mapToInt(i->i.precio()).sum();
     }
 
     public void agregarItem(Item item){

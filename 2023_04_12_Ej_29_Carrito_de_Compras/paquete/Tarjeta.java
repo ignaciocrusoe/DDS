@@ -1,7 +1,7 @@
 package paquete;
 
 import java.util.Date;
-import persona.java.Persona;
+
 
 public class Tarjeta {
 
