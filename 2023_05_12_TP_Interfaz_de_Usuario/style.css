@@ -1,0 +1,23 @@
+#formulario {
+    text-align: left;
+    width: 20vw;
+    height: 300px;
+    display: block;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    height: 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+label{
+    margin-top: 15px;
+}
+button{
+    position: right;
+    margin-top: 50px;
+}
