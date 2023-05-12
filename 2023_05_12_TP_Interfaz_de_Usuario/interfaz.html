@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+<body>
+<div>
+  <form name="formulario" id="formulario" action="">
+    <label>Usuario:</label> 
+    <input type="text" name="user" required><br>
+    <label>Contraseña:</label> 
+    <input type="text" name="password" required><br>
+    <button type="submit" name="submit">Validar</button>
+  </form> 
+</div>
+
+
+<script>
+let form = document.forms["formulario"];
+form.addEventListener("submit", validar);
+
+function validar() {
+
+  event.preventDefault();
+    let data = {
+    "user": form.user.value, 
+    "password": form.password.value, 
+  }
+
+  if(data.user == "admin"){
+    alert("Usuario incorrecto");
+  }
+
+  if(data.user == data.password || data.password == "1234" || data.password == "admin"){
+    alert("Contraseña incorrecto");
+  }
+
+  
+}
+</script>
+
+</body>
+</html>
