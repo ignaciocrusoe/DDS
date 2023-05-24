@@ -9,6 +9,7 @@ public class Prestamo{
     private LocalDateTime  fechaPrestamo;
     private LocalDateTime  fechaDeDevolucion;
     private LocalDateTime fechaVencimiento;
+    private Integer diasMultado;
 
     public Prestamo(/*Copia copiaPrestada*/){
         //this.copiaPrestada = copiaPrestada;
@@ -17,7 +18,9 @@ public class Prestamo{
 
     public void recibirDevolucion(){
         this.fechaDeDevolucion = LocalDateTime.now();
-        this.fechaVencimiento = this.fechaPrestamo.plusDays(30);
+        this.verificarPrestamo()
+        this.diasMultado = this.calcularDiasDeMulta();
+        //multa.sumarMultas();  <-- Agregar después de implementar la clase Multa
         this.devuelto = true;
     }
 
