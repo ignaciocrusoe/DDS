@@ -1,26 +1,28 @@
 import java.time.temporal.ChronoUnit;
 import java.time.LocalDateTime;
 
+
+
 public class Prestamo{
     private Boolean devuelto = false;
     private Boolean vencido = false;
-    //private Copia copiaPrestada;
+    private Copia copiaPrestada;
     //private Persona persona;
     private LocalDateTime  fechaPrestamo;
     private LocalDateTime  fechaDeDevolucion;
     private LocalDateTime fechaVencimiento;
-    private Integer diasMultado;
 
-    public Prestamo(/*Copia copiaPrestada*/){
-        //this.copiaPrestada = copiaPrestada;
+    public Prestamo(Copia copia){
+        this.copiaPrestada = copia;
         this.fechaPrestamo = LocalDateTime.now();
+        this.fechaVencimiento = this.fechaPrestamo.plusDays(30);
+
+        
     }
 
     public void recibirDevolucion(){
         this.fechaDeDevolucion = LocalDateTime.now();
-        this.verificarPrestamo()
-        this.diasMultado = this.calcularDiasDeMulta();
-        //multa.sumarMultas();  <-- Agregar después de implementar la clase Multa
+        this.verificarPrestamo();
         this.devuelto = true;
     }
 
