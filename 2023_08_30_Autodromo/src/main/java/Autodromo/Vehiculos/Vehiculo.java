@@ -4,6 +4,7 @@ import Autodromo.Participantes.EquipoDeCompeticion;
 import jakarta.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Vehiculo {
 
     @Id
@@ -19,7 +20,7 @@ public class Vehiculo {
     private float peso;
     @ManyToOne()
     @JoinColumn(name = "id_equipo")
-    private EquipoDeCompeticion equipo;
+    private EquipoDeCompeticion vehiculoEquipo;
 
     public long getIdVehiculo() {
         return idVehiculo;
@@ -54,12 +55,21 @@ public class Vehiculo {
     }
 
     public EquipoDeCompeticion getEquipo() {
-        return equipo;
+        return vehiculoEquipo;
     }
 
     public void setEquipo(EquipoDeCompeticion equipo) {
-        this.equipo = equipo;
+        this.vehiculoEquipo = equipo;
     }
 
+    public Vehiculo(long idVehiculo, String modelo, String marca, float peso, EquipoDeCompeticion vehiculoEquipo) {
+        this.idVehiculo = idVehiculo;
+        this.modelo = modelo;
+        this.marca = marca;
+        this.peso = peso;
+        this.vehiculoEquipo = vehiculoEquipo;
+    }
 
+    public Vehiculo() {
+    }
 }

@@ -24,6 +24,7 @@ public class EquipoDeCompeticion {
     @OneToMany(mappedBy = "vehiculoEquipo")
     private List<Vehiculo> vehiculos;
     @ManyToOne
+    @JoinColumn(name = "id_competencia")
     private Competencia equiposCompetencia;
 
     public long getIdEquipo() {

@@ -11,7 +11,7 @@ public class Espacio {
     private long idEspacio;
 
     @ManyToOne
-    @Column(name="espaciosAutodromo")
+    @JoinColumn(name="espaciosAutodromo")
     private Autodromo espaciosAutodromo;
     public long getIdEspacio() {
         return idEspacio;

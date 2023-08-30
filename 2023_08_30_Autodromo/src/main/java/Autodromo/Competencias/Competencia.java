@@ -1,5 +1,6 @@
 package Autodromo.Competencias;
 
+import Autodromo.Autodromo.Autodromo;
 import Autodromo.Participantes.EquipoDeCompeticion;
 import jakarta.persistence.*;
 
@@ -18,7 +19,6 @@ public class Competencia {
     private String nombre;
 
     @OneToOne
-    @Column(name="entidad_organizadora")
     private EntidadOrganizadora entidadOrganizador;
     @Column(name="fecha_competencia")
     private Date fechaCompetencia;
@@ -28,6 +28,9 @@ public class Competencia {
 
     @Column(name = "tipoActividad")
     private TipoActividad tipoActividad;
+    @ManyToOne
+    @JoinColumn(name = "id_autodromo")
+    private Autodromo autodromo;
 
 
 }

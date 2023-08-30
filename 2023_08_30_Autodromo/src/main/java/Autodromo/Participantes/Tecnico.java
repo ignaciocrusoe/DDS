@@ -18,7 +18,7 @@ public class Tecnico {
     @Transient
     private List<Certificado> certificadoDeEstudio;
     @ManyToOne
-    @Column(name="tecnicoEquipo")
+    @JoinColumn(name="id_equipo")
     private EquipoDeCompeticion tecnicoEquipo;
     public void solicitarCertificados(){}
 

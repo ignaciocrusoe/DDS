@@ -13,7 +13,7 @@ public class Corredor {
     @Column(name="nombre")
     private String nombre;
     @ManyToOne
-    @Column(name="corredorEquipo")
+    @JoinColumn(name="id_equipo")
     private EquipoDeCompeticion corredorEquipo;
     public void inscribirse(Competencia competencia){} //hay que agregar en la lista de competencias al corredor
     public void verificarAntecedentes(){} //Habria que agregar antecedentes al corredor?

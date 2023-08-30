@@ -21,8 +21,9 @@ public class Persona {
     @Column(name="peso")
     private float peso;
     @ManyToOne
-    @Column(name="tecnicoEquipo")
-    private EquipoDeCompeticion tecnicoEquipo;
+    @JoinColumn(name="id_equipo")
+    private EquipoDeCompeticion personaEquipo;
+
     public void verificarIdentidad(){} //fijate como se verifica more (xd)
 
     public long getIdPersona() {
@@ -66,10 +67,10 @@ public class Persona {
     }
 
     public EquipoDeCompeticion getTecnicoEquipo() {
-        return tecnicoEquipo;
+        return personaEquipo;
     }
 
     public void setTecnicoEquipo(EquipoDeCompeticion tecnicoEquipo) {
-        this.tecnicoEquipo = tecnicoEquipo;
+        this.personaEquipo = tecnicoEquipo;
     }
 }

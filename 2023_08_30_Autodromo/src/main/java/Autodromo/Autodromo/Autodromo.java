@@ -15,7 +15,7 @@ public class Autodromo {
     private Long id_autodromo;
     @Column(name="nombre")
     private String nombre;
-    @OneToMany(mappedBy = "competenciasAutodromo")
+    @OneToMany(mappedBy = "autodromo")
     private List<Competencia> competencias;
     @OneToMany(mappedBy = "espaciosAutodromo")
     private List<Espacio> espacios;
